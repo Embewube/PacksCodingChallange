@@ -11,7 +11,6 @@ import UIKit
 class PackListController: UIViewController {
     private let viewModel: any PackListViewModelProtocol = PackListViewModel() // wb_TODO: use protocol and DI
     private var cancellables: Set<AnyCancellable> = []
-    private var packs: [Pack] = [] // wb_TODO: move to table view data provider
 
     @IBOutlet private var stackView: UIStackView! // wb_TODO: replace with table view
 
@@ -43,7 +42,7 @@ class PackListController: UIViewController {
         }
     }
     
-    private func addPackView(_ pack: Pack) {
+    private func addPackView(_ pack: PackListItemViewModel) {
         let packView = PackView()
         packView.setup(pack: pack)
         stackView.addArrangedSubview(packView)

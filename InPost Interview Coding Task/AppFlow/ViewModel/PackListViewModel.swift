@@ -8,25 +8,25 @@
 import Combine
 
 protocol PackListViewModelProtocol: ObservableObject {
-    var packs: AnyPublisher<[Pack], Never> { get } // wb_TODO: change to item view model
+    var packs: AnyPublisher<[PackListItemViewModel], Never> { get } // wb_TODO: change to item view model
     func loadPacks()
 }
 
 final class PackListViewModel: PackListViewModelProtocol {
-    @Published private var packsPublisher: [Pack] = []
-    private let packNetworking = PackNetworking()
+    @Published private var packsPublisher: [PackListItemViewModel] = []
+    private let getPacksUseCase: GetPacksUseCaseProtocol = GetPacksUseCase() // wb_TODO: use dependency injection
 
     func loadPacks() {
         Task {
             do {
-                packsPublisher = try await packNetworking.getPacks()
+                packsPublisher = try await getPacksUseCase.get()
             } catch {
                 // wb_TODO: handle error
             }
         }
     }
 
-    var packs: AnyPublisher<[Pack], Never> {
+    var packs: AnyPublisher<[PackListItemViewModel], Never> {
         return $packsPublisher.eraseToAnyPublisher()
     }
 }

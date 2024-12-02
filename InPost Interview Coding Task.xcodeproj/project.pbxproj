@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */; };
 		CB0A2C032CFE558300C8B73A /* PackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C022CFE557E00C8B73A /* PackListViewModel.swift */; };
+		CB0A2C132CFE645300C8B73A /* GetPacksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C122CFE644A00C8B73A /* GetPacksUseCase.swift */; };
+		CB0A2C152CFE64B200C8B73A /* PackMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C142CFE64B000C8B73A /* PackMapper.swift */; };
+		CB0A2C172CFE650D00C8B73A /* PackListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C162CFE650C00C8B73A /* PackListItemViewModel.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0A2C022CFE557E00C8B73A /* PackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListViewModel.swift; sourceTree = "<group>"; };
+		CB0A2C122CFE644A00C8B73A /* GetPacksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPacksUseCase.swift; sourceTree = "<group>"; };
+		CB0A2C142CFE64B000C8B73A /* PackMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackMapper.swift; sourceTree = "<group>"; };
+		CB0A2C162CFE650C00C8B73A /* PackListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListItemViewModel.swift; sourceTree = "<group>"; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 		CB0A2C002CFE555200C8B73A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CB0A2C122CFE644A00C8B73A /* GetPacksUseCase.swift */,
+				CB0A2C142CFE64B000C8B73A /* PackMapper.swift */,
 				D671D98E2913F2A1001FA9D5 /* Pack.swift */,
 			);
 			path = Model;
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CB0A2C022CFE557E00C8B73A /* PackListViewModel.swift */,
+				CB0A2C162CFE650C00C8B73A /* PackListItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -494,9 +503,12 @@
 			files = (
 				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
+				CB0A2C172CFE650D00C8B73A /* PackListItemViewModel.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
+				CB0A2C132CFE645300C8B73A /* GetPacksUseCase.swift in Sources */,
 				CB0A2C032CFE558300C8B73A /* PackListViewModel.swift in Sources */,
 				D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */,
+				CB0A2C152CFE64B200C8B73A /* PackMapper.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
 			);

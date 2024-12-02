@@ -29,7 +29,7 @@ class PackView: UIView {
         setupView()
     }
     
-    func setup(pack: Pack) {
+    func setup(pack: PackListItemViewModel) {
         numberLabel.text = pack.id
         statusLabel.text = pack.status
         senderLabel.text = pack.sender
