@@ -17,9 +17,11 @@ final class PackListViewModel: PackListViewModelProtocol {
     private let packNetworking = PackNetworking()
 
     func loadPacks() {
-        packNetworking.getPacks { result in
-            if case .success(let packs) = result {
-                self.packsPublisher = packs
+        Task {
+            do {
+                packsPublisher = try await packNetworking.getPacks()
+            } catch {
+                // wb_TODO: handle error
             }
         }
     }
