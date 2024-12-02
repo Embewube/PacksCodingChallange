@@ -5,33 +5,38 @@
 //  Created by Damian Piwowarski on 03/11/2022.
 //
 
+import Combine
 import UIKit
 
 class PackListController: UIViewController {
+    private let viewModel: any PackListViewModelProtocol = PackListViewModel() // wb_TODO: use protocol and DI
+    private var cancellables: Set<AnyCancellable> = []
+    private var packs: [Pack] = [] // wb_TODO: move to table view data provider
 
-    @IBOutlet private var stackView: UIStackView!
-    
-    private let packNetworking = PackNetworking()
-    
+    @IBOutlet private var stackView: UIStackView! // wb_TODO: replace with table view
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Lista przesyłek"
-        
-        loadPacks()
+
+        setupBindings()
+        viewModel.loadPacks()
     }
-    
-    private func loadPacks() {
-        packNetworking.getPacks { result in
-            self.removePacks()
-            
-            if case .success(let packs) = result {
+
+    private func setupBindings() {
+        viewModel.packs
+            .print("AAA")
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] packs in
+                self?.removePacks()
+
                 packs.forEach { pack in
-                    self.addPackView(pack)
+                    self?.addPackView(pack)
                 }
             }
-        }
+            .store(in: &cancellables)
     }
-    
+
     private func removePacks() {
         stackView.arrangedSubviews.forEach { subview in
             subview.removeFromSuperview()
