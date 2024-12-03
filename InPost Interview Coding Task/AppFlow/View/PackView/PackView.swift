@@ -8,7 +8,7 @@
 import UIKit
 
 class PackView: UIView {
-    
+    // wb_TODO: refactor to use code only (not storyboards)
     @IBOutlet private var contentView: UIView!
     
     @IBOutlet private var contentContainer: UIView!
