@@ -13,7 +13,7 @@ struct PackMapper: PackMapping {
     func map(_ pack: Pack) -> PackListItemViewModel {
         return PackListItemViewModel(
             id: pack.id,
-            status: pack.status,
+            status: pack.status.rawValue,
             sender: pack.sender
         )
     }
