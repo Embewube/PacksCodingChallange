@@ -19,9 +19,16 @@ final class PackListFactory: PackListFactoryProtocol {
     }
 
     func makePackListController() -> UIViewController {
-        let viewModel = makePackListViewModel()
+        let getPacksUseCase = dependencyContainer.provideGetPacksUseCase()
+        let viewModel = PackListViewModel(getPacksUseCase: getPacksUseCase)
+        let view = PackListView()
+        let tableViewDataProvider = PackListTableViewDataProvider()
 
-        return PackListController(viewModel: viewModel)
+        return PackListController(
+            viewModel: viewModel,
+            view: view,
+            tableViewDataProvider: tableViewDataProvider
+        )
     }
 }
 

@@ -27,6 +27,8 @@ class PackListTableViewDataProvider: NSObject {
     }
 }
 
+// MARK: - PackListTableViewDataProviderProtocol
+
 extension PackListTableViewDataProvider: PackListTableViewDataProviderProtocol {
     func setup(tableView: UITableView) {
         self.tableView = tableView

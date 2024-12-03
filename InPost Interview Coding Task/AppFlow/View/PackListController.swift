@@ -10,15 +10,23 @@ import UIKit
 
 // wb_TODO: move PackList to a seperate vertical module
 class PackListController: UIViewController {
+    // Dependencies
     private let viewModel: any PackListViewModelProtocol
-    private let packListView: PackListViewProtocol = PackListView()
-    private let tableViewDataProvider: PackListTableViewDataProviderProtocol = PackListTableViewDataProvider() // wb_TODO: use DI
+    private let packListView: PackListViewProtocol
+    private let tableViewDataProvider: PackListTableViewDataProviderProtocol
+
+    // Other properties
     private var cancellables: Set<AnyCancellable> = []
 
     init(
-        viewModel: any PackListViewModelProtocol
+        viewModel: any PackListViewModelProtocol,
+        view: PackListViewProtocol,
+        tableViewDataProvider: PackListTableViewDataProviderProtocol
     ) {
         self.viewModel = viewModel
+        self.packListView = view
+        self.tableViewDataProvider = tableViewDataProvider
+
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -40,8 +48,12 @@ class PackListController: UIViewController {
         setupBindings()
         viewModel.loadPacks()
     }
+}
 
-    private func setupBindings() {
+// MARK: - Private
+
+private extension PackListController {
+    func setupBindings() {
         // wb_TODO: add loader or skeleton
         viewModel.packs
             .receive(on: DispatchQueue.main)
