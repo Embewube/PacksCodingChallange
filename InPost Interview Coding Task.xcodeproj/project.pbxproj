@@ -18,6 +18,9 @@
 		CB0A2C222CFF47B400C8B73A /* PackListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C212CFF47A200C8B73A /* PackListFactory.swift */; };
 		CB0A2C252CFF493D00C8B73A /* DependencyProvidersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C242CFF493500C8B73A /* DependencyProvidersContainer.swift */; };
 		CB0A2C272CFF49AB00C8B73A /* PackListDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C262CFF49A000C8B73A /* PackListDependencyProvider.swift */; };
+		CB0A2C2B2CFF624A00C8B73A /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C2A2CFF624300C8B73A /* APIEndpoint.swift */; };
+		CB0A2C2D2CFF628900C8B73A /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C2C2CFF628300C8B73A /* URLFactory.swift */; };
+		CB0A2C2F2CFF63C100C8B73A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C2E2CFF63BC00C8B73A /* NetworkService.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
@@ -68,6 +71,9 @@
 		CB0A2C212CFF47A200C8B73A /* PackListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListFactory.swift; sourceTree = "<group>"; };
 		CB0A2C242CFF493500C8B73A /* DependencyProvidersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvidersContainer.swift; sourceTree = "<group>"; };
 		CB0A2C262CFF49A000C8B73A /* PackListDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListDependencyProvider.swift; sourceTree = "<group>"; };
+		CB0A2C2A2CFF624300C8B73A /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		CB0A2C2C2CFF628300C8B73A /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
+		CB0A2C2E2CFF63BC00C8B73A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
@@ -293,6 +299,9 @@
 		D671D9952915110C001FA9D5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CB0A2C2E2CFF63BC00C8B73A /* NetworkService.swift */,
+				CB0A2C2A2CFF624300C8B73A /* APIEndpoint.swift */,
+				CB0A2C2C2CFF628300C8B73A /* URLFactory.swift */,
 				D671D99929151360001FA9D5 /* Mock */,
 				D671D9962915111C001FA9D5 /* PackNetworking.swift */,
 			);
@@ -561,6 +570,9 @@
 				CB0A2C1E2CFF18C800C8B73A /* PackListTableViewCell.swift in Sources */,
 				CB0A2C152CFE64B200C8B73A /* PackMapper.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
+				CB0A2C2D2CFF628900C8B73A /* URLFactory.swift in Sources */,
+				CB0A2C2F2CFF63C100C8B73A /* NetworkService.swift in Sources */,
+				CB0A2C2B2CFF624A00C8B73A /* APIEndpoint.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
 				CB0A2C222CFF47B400C8B73A /* PackListFactory.swift in Sources */,
 			);

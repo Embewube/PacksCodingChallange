@@ -10,19 +10,19 @@ protocol GetPacksUseCaseProtocol {
 }
 
 struct GetPacksUseCase: GetPacksUseCaseProtocol {
-    private let packNetworking: PackNetworkingProtocol
+    private let packsNetworking: PacksNetworkingProtocol
     private let mapper: PackMapping
 
     init(
-        packNetworking: PackNetworkingProtocol,
+        packsNetworking: PacksNetworkingProtocol,
         mapper: PackMapping
     ) {
-        self.packNetworking = packNetworking
+        self.packsNetworking = packsNetworking
         self.mapper = mapper
     }
 
     func get() async throws -> [PackListItemViewModel] {
-        return try await packNetworking.getPacks()
+        return try await packsNetworking.getPacks()
             .map(mapper.map)
     }
 }

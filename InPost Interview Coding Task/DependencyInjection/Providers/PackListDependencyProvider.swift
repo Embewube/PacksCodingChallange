@@ -19,7 +19,7 @@ final class PackListDependencyProvider: PackListDependencyProviding {
 
     func provideGetPacksUseCase() -> any GetPacksUseCaseProtocol {
         return GetPacksUseCase(
-            packNetworking: dependencyProvider.providePackNetworking(),
+            packsNetworking: dependencyProvider.providePacksNetworking(),
             mapper: providePackMapper()
         )
     }

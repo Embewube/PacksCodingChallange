@@ -26,6 +26,7 @@ final class PackListViewModel: PackListViewModelProtocol {
                 packsPublisher = try await getPacksUseCase.get()
             } catch {
                 // wb_TODO: handle error
+                print(error)
             }
         }
     }
