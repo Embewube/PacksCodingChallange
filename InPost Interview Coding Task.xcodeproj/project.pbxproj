@@ -11,7 +11,7 @@
 		CB0A2C032CFE558300C8B73A /* PackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C022CFE557E00C8B73A /* PackListViewModel.swift */; };
 		CB0A2C132CFE645300C8B73A /* GetPacksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C122CFE644A00C8B73A /* GetPacksUseCase.swift */; };
 		CB0A2C152CFE64B200C8B73A /* PackMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C142CFE64B000C8B73A /* PackMapper.swift */; };
-		CB0A2C172CFE650D00C8B73A /* PackListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C162CFE650C00C8B73A /* PackListItemViewModel.swift */; };
+		CB0A2C172CFE650D00C8B73A /* PackListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C162CFE650C00C8B73A /* PackListItem.swift */; };
 		CB0A2C192CFF02FB00C8B73A /* PackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C182CFF02F800C8B73A /* PackListView.swift */; };
 		CB0A2C1B2CFF062400C8B73A /* PackListTableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C1A2CFF061E00C8B73A /* PackListTableViewDataProvider.swift */; };
 		CB0A2C1E2CFF18C800C8B73A /* PackListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C1D2CFF18C600C8B73A /* PackListTableViewCell.swift */; };
@@ -21,6 +21,10 @@
 		CB0A2C2B2CFF624A00C8B73A /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C2A2CFF624300C8B73A /* APIEndpoint.swift */; };
 		CB0A2C2D2CFF628900C8B73A /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C2C2CFF628300C8B73A /* URLFactory.swift */; };
 		CB0A2C2F2CFF63C100C8B73A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C2E2CFF63BC00C8B73A /* NetworkService.swift */; };
+		CB0A2C312CFF96CC00C8B73A /* PackListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C302CFF96C000C8B73A /* PackListSection.swift */; };
+		CB0A2C352CFF97AE00C8B73A /* PacksOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C342CFF97AA00C8B73A /* PacksOrganizer.swift */; };
+		CB0A2C372CFF97FD00C8B73A /* PackSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C362CFF97F700C8B73A /* PackSection.swift */; };
+		CB0A2C392CFFA36900C8B73A /* PackListTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C382CFFA36000C8B73A /* PackListTableViewSectionHeader.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
@@ -64,7 +68,7 @@
 		CB0A2C022CFE557E00C8B73A /* PackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListViewModel.swift; sourceTree = "<group>"; };
 		CB0A2C122CFE644A00C8B73A /* GetPacksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPacksUseCase.swift; sourceTree = "<group>"; };
 		CB0A2C142CFE64B000C8B73A /* PackMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackMapper.swift; sourceTree = "<group>"; };
-		CB0A2C162CFE650C00C8B73A /* PackListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListItemViewModel.swift; sourceTree = "<group>"; };
+		CB0A2C162CFE650C00C8B73A /* PackListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListItem.swift; sourceTree = "<group>"; };
 		CB0A2C182CFF02F800C8B73A /* PackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListView.swift; sourceTree = "<group>"; };
 		CB0A2C1A2CFF061E00C8B73A /* PackListTableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListTableViewDataProvider.swift; sourceTree = "<group>"; };
 		CB0A2C1D2CFF18C600C8B73A /* PackListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,6 +78,10 @@
 		CB0A2C2A2CFF624300C8B73A /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		CB0A2C2C2CFF628300C8B73A /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
 		CB0A2C2E2CFF63BC00C8B73A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CB0A2C302CFF96C000C8B73A /* PackListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListSection.swift; sourceTree = "<group>"; };
+		CB0A2C342CFF97AA00C8B73A /* PacksOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksOrganizer.swift; sourceTree = "<group>"; };
+		CB0A2C362CFF97F700C8B73A /* PackSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackSection.swift; sourceTree = "<group>"; };
+		CB0A2C382CFFA36000C8B73A /* PackListTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListTableViewSectionHeader.swift; sourceTree = "<group>"; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
@@ -159,8 +167,10 @@
 			isa = PBXGroup;
 			children = (
 				CB0A2C122CFE644A00C8B73A /* GetPacksUseCase.swift */,
+				CB0A2C342CFF97AA00C8B73A /* PacksOrganizer.swift */,
 				CB0A2C142CFE64B000C8B73A /* PackMapper.swift */,
 				D671D98E2913F2A1001FA9D5 /* Pack.swift */,
+				CB0A2C362CFF97F700C8B73A /* PackSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,7 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				CB0A2C022CFE557E00C8B73A /* PackListViewModel.swift */,
-				CB0A2C162CFE650C00C8B73A /* PackListItemViewModel.swift */,
+				CB0A2C302CFF96C000C8B73A /* PackListSection.swift */,
+				CB0A2C162CFE650C00C8B73A /* PackListItem.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				CB0A2C1D2CFF18C600C8B73A /* PackListTableViewCell.swift */,
+				CB0A2C382CFFA36000C8B73A /* PackListTableViewSectionHeader.swift */,
 				CB0A2C1A2CFF061E00C8B73A /* PackListTableViewDataProvider.swift */,
 			);
 			path = TableView;
@@ -561,12 +573,16 @@
 				CB0A2C1B2CFF062400C8B73A /* PackListTableViewDataProvider.swift in Sources */,
 				CB0A2C192CFF02FB00C8B73A /* PackListView.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
-				CB0A2C172CFE650D00C8B73A /* PackListItemViewModel.swift in Sources */,
+				CB0A2C172CFE650D00C8B73A /* PackListItem.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
 				CB0A2C132CFE645300C8B73A /* GetPacksUseCase.swift in Sources */,
+				CB0A2C312CFF96CC00C8B73A /* PackListSection.swift in Sources */,
+				CB0A2C392CFFA36900C8B73A /* PackListTableViewSectionHeader.swift in Sources */,
 				CB0A2C252CFF493D00C8B73A /* DependencyProvidersContainer.swift in Sources */,
 				CB0A2C032CFE558300C8B73A /* PackListViewModel.swift in Sources */,
 				D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */,
+				CB0A2C372CFF97FD00C8B73A /* PackSection.swift in Sources */,
+				CB0A2C352CFF97AE00C8B73A /* PacksOrganizer.swift in Sources */,
 				CB0A2C1E2CFF18C800C8B73A /* PackListTableViewCell.swift in Sources */,
 				CB0A2C152CFE64B200C8B73A /* PackMapper.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,

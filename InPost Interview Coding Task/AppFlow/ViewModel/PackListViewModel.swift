@@ -8,12 +8,12 @@
 import Combine
 
 protocol PackListViewModelProtocol: ObservableObject {
-    var packs: AnyPublisher<[PackListItemViewModel], Never> { get } // wb_TODO: change to item view model
+    var packs: AnyPublisher<[PackListSection], Never> { get } // wb_TODO: change to item view model
     func loadPacks()
 }
 
 final class PackListViewModel: PackListViewModelProtocol {
-    @Published private var packsPublisher: [PackListItemViewModel] = []
+    @Published private var packsPublisher: [PackListSection] = []
     private let getPacksUseCase: GetPacksUseCaseProtocol
 
     init(getPacksUseCase: GetPacksUseCaseProtocol) {
@@ -21,9 +21,9 @@ final class PackListViewModel: PackListViewModelProtocol {
     }
 
     func loadPacks() {
-        Task {
+        Task { [weak self] in
             do {
-                packsPublisher = try await getPacksUseCase.get()
+                self?.packsPublisher = try await self?.getPacksUseCase.get() ?? []
             } catch {
                 // wb_TODO: handle error
                 print(error)
@@ -31,7 +31,7 @@ final class PackListViewModel: PackListViewModelProtocol {
         }
     }
 
-    var packs: AnyPublisher<[PackListItemViewModel], Never> {
+    var packs: AnyPublisher<[PackListSection], Never> {
         return $packsPublisher.eraseToAnyPublisher()
     }
 }

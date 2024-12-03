@@ -7,7 +7,6 @@
 
 protocol PackListDependencyProviding {
     func provideGetPacksUseCase() -> GetPacksUseCaseProtocol // wb_TODO: consider moving it to common dependencies
-    func providePackMapper() -> PackMapping // wb_TODO: consider moving it to common dependencies
 }
 
 final class PackListDependencyProvider: PackListDependencyProviding {
@@ -20,11 +19,8 @@ final class PackListDependencyProvider: PackListDependencyProviding {
     func provideGetPacksUseCase() -> any GetPacksUseCaseProtocol {
         return GetPacksUseCase(
             packsNetworking: dependencyProvider.providePacksNetworking(),
-            mapper: providePackMapper()
+            packsOrganizer: PacksOrganizer(), 
+            mapper: PackMapper()
         )
-    }
-
-    func providePackMapper() -> PackMapping {
-        return PackMapper()
     }
 }

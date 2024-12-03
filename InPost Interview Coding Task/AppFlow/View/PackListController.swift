@@ -58,7 +58,7 @@ private extension PackListController {
         viewModel.packs
             .receive(on: DispatchQueue.main)
             .sink { [weak self] packs in
-                self?.tableViewDataProvider.items = packs
+                self?.tableViewDataProvider.sections = packs
             }
             .store(in: &cancellables)
     }

@@ -23,7 +23,7 @@ final class PackListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(with viewModel: PackListItemViewModel) {
+    func configure(with viewModel: PackListItem) {
         view.setup(pack: viewModel)
     }
 

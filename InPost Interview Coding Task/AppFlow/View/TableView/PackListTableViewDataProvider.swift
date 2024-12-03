@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PackListTableViewDataProviderProtocol: NSObject, UITableViewDataSource {
-    var items: [PackListItemViewModel] { get set }
+    var sections: [PackListSection] { get set }
 
     func setup(tableView: UITableView)
 }
@@ -16,9 +16,9 @@ protocol PackListTableViewDataProviderProtocol: NSObject, UITableViewDataSource 
 class PackListTableViewDataProvider: NSObject {
     private weak var tableView: UITableView?
 
-    var items: [PackListItemViewModel] = [] {
+    var sections: [PackListSection] = [] {
         didSet {
-            guard items != oldValue else {
+            guard sections != oldValue else {
                 return
             }
 
@@ -33,14 +33,39 @@ extension PackListTableViewDataProvider: PackListTableViewDataProviderProtocol {
     func setup(tableView: UITableView) {
         self.tableView = tableView
         tableView.separatorStyle = .none
+
         tableView.register(
             PackListTableViewCell.self,
             forCellReuseIdentifier: PackListTableViewCell.reuseIdentifier
         )
+        tableView.register(
+            PackListTableViewSectionHeader.self,
+            forHeaderFooterViewReuseIdentifier: PackListTableViewSectionHeader.reuseIdentifier
+        )
     }
 
+    // MARK: - Sections
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard section < sections.count else {
+            return nil
+        }
+
+        return sections[section].title
+    }
+
+    // MARK: - Rows
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        guard section < sections.count else {
+            return 0
+        }
+
+        return sections[section].items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,9 +74,17 @@ extension PackListTableViewDataProvider: PackListTableViewDataProviderProtocol {
             for: indexPath
         ) as! PackListTableViewCell
 
-        let item = items[indexPath.row]
-        cell.configure(with: item)
         cell.selectionStyle = .none
+
+        guard
+            indexPath.section < sections.count,
+            indexPath.row < sections[indexPath.section].items.count
+        else {
+            return cell
+        }
+
+        let item = sections[indexPath.section].items[indexPath.row]
+        cell.configure(with: item)
 
         return cell
     }
