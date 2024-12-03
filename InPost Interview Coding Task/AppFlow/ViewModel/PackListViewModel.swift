@@ -14,7 +14,11 @@ protocol PackListViewModelProtocol: ObservableObject {
 
 final class PackListViewModel: PackListViewModelProtocol {
     @Published private var packsPublisher: [PackListItemViewModel] = []
-    private let getPacksUseCase: GetPacksUseCaseProtocol = GetPacksUseCase() // wb_TODO: use dependency injection
+    private let getPacksUseCase: GetPacksUseCaseProtocol
+
+    init(getPacksUseCase: GetPacksUseCaseProtocol) {
+        self.getPacksUseCase = getPacksUseCase
+    }
 
     func loadPacks() {
         Task {

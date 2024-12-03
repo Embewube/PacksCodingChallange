@@ -10,8 +10,16 @@ protocol GetPacksUseCaseProtocol {
 }
 
 struct GetPacksUseCase: GetPacksUseCaseProtocol {
-    private let packNetworking = PackNetworking() // wb_TODO: use dependency injection
-    private let mapper: PackMapping = PackMapper() // wb_TODO: use dependency injection
+    private let packNetworking: PackNetworkingProtocol
+    private let mapper: PackMapping
+
+    init(
+        packNetworking: PackNetworkingProtocol,
+        mapper: PackMapping
+    ) {
+        self.packNetworking = packNetworking
+        self.mapper = mapper
+    }
 
     func get() async throws -> [PackListItemViewModel] {
         return try await packNetworking.getPacks()

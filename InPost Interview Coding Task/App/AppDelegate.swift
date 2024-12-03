@@ -9,18 +9,27 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    private let dependencyProvider: DependencyProvidersContaining
     var window: UIWindow?
 
+    override init() {
+        dependencyProvider = DependencyProvidersContainer.shared
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        super.init()
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        buildStartingView()
+        startAppFlow()
+
         return true
     }
 
-    private func buildStartingView() {
-        let packListController = PackListController()
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
+    // wb_TODO: use Coordinators
+    private func startAppFlow() {
+        let packListFactory = PackListFactory(dependencyContainer: dependencyProvider.packListDependencyProvider)
+        let packListController = packListFactory.makePackListController()
+
         window?.rootViewController = IPNavigationController(rootViewController: packListController)
         window?.makeKeyAndVisible()
     }

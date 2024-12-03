@@ -7,8 +7,15 @@
 
 import Foundation
 
-class PackNetworking {
-    
+protocol PackNetworkingProtocol {
+    func getPacks() async throws -> [Pack]
+}
+
+// wb_TODO: Move networking to seperate horizontal module / or seperate library
+// wb_TODO: abstract networking
+class PackNetworking: PackNetworkingProtocol {
+
+    // wb_TODO: inject jsonDecoder
     private let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601

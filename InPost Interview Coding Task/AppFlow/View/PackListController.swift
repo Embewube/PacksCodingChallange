@@ -8,13 +8,17 @@
 import Combine
 import UIKit
 
+// wb_TODO: move PackList to a seperate vertical module
 class PackListController: UIViewController {
-    private let viewModel: any PackListViewModelProtocol = PackListViewModel() // wb_TODO: use DI
+    private let viewModel: any PackListViewModelProtocol
     private let packListView: PackListViewProtocol = PackListView()
     private let tableViewDataProvider: PackListTableViewDataProviderProtocol = PackListTableViewDataProvider() // wb_TODO: use DI
     private var cancellables: Set<AnyCancellable> = []
 
-    init() { // wb_TODO: inject viewModel and view and data provider
+    init(
+        viewModel: any PackListViewModelProtocol
+    ) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -38,6 +42,7 @@ class PackListController: UIViewController {
     }
 
     private func setupBindings() {
+        // wb_TODO: add loader or skeleton
         viewModel.packs
             .receive(on: DispatchQueue.main)
             .sink { [weak self] packs in
