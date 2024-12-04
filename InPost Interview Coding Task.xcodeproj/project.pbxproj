@@ -25,6 +25,17 @@
 		CB0A2C352CFF97AE00C8B73A /* PacksOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C342CFF97AA00C8B73A /* PacksOrganizer.swift */; };
 		CB0A2C372CFF97FD00C8B73A /* PackSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C362CFF97F700C8B73A /* PackSection.swift */; };
 		CB0A2C392CFFA36900C8B73A /* PackListTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C382CFFA36000C8B73A /* PackListTableViewSectionHeader.swift */; };
+		CBE1CCED2D00513600C7B714 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCEC2D00512F00C7B714 /* Colors.swift */; };
+		CBE1CCF02D00517500C7B714 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCEF2D00517100C7B714 /* UIColor+hex.swift */; };
+		CBE1CCF52D00540500C7B714 /* LayoutTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCF42D0053FB00C7B714 /* LayoutTokens.swift */; };
+		CBE1CCF72D00693300C7B714 /* ColorTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCF62D00692F00C7B714 /* ColorTokens.swift */; };
+		CBE1CCF92D006A2A00C7B714 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCF82D006A2800C7B714 /* AppFont.swift */; };
+		CBE1CD002D006B7A00C7B714 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBE1CCFC2D006B7A00C7B714 /* Montserrat-Bold.otf */; };
+		CBE1CD012D006B7A00C7B714 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBE1CCFB2D006B7A00C7B714 /* Montserrat-Black.otf */; };
+		CBE1CD022D006B7A00C7B714 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBE1CCFF2D006B7A00C7B714 /* Montserrat-SemiBold.otf */; };
+		CBE1CD032D006B7A00C7B714 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBE1CCFD2D006B7A00C7B714 /* Montserrat-ExtraBold.otf */; };
+		CBE1CD042D006B7A00C7B714 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBE1CCFE2D006B7A00C7B714 /* Montserrat-Medium.otf */; };
+		CBE1CD0A2D0076D600C7B714 /* NSAttributedString+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CD092D0076D600C7B714 /* NSAttributedString+AppFont.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
@@ -82,6 +93,17 @@
 		CB0A2C342CFF97AA00C8B73A /* PacksOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksOrganizer.swift; sourceTree = "<group>"; };
 		CB0A2C362CFF97F700C8B73A /* PackSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackSection.swift; sourceTree = "<group>"; };
 		CB0A2C382CFFA36000C8B73A /* PackListTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListTableViewSectionHeader.swift; sourceTree = "<group>"; };
+		CBE1CCEC2D00512F00C7B714 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CBE1CCEF2D00517100C7B714 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		CBE1CCF42D0053FB00C7B714 /* LayoutTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTokens.swift; sourceTree = "<group>"; };
+		CBE1CCF62D00692F00C7B714 /* ColorTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTokens.swift; sourceTree = "<group>"; };
+		CBE1CCF82D006A2800C7B714 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		CBE1CCFB2D006B7A00C7B714 /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		CBE1CCFC2D006B7A00C7B714 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		CBE1CCFD2D006B7A00C7B714 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		CBE1CCFE2D006B7A00C7B714 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		CBE1CCFF2D006B7A00C7B714 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		CBE1CD092D0076D600C7B714 /* NSAttributedString+AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+AppFont.swift"; sourceTree = "<group>"; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
@@ -221,6 +243,38 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		CBE1CCEE2D00516200C7B714 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CBE1CCEF2D00517100C7B714 /* UIColor+hex.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CBE1CCF12D0051F300C7B714 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				CBE1CCFA2D006B6D00C7B714 /* Font */,
+				CBE1CCF62D00692F00C7B714 /* ColorTokens.swift */,
+				CBE1CCF42D0053FB00C7B714 /* LayoutTokens.swift */,
+				CBE1CCEC2D00512F00C7B714 /* Colors.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		CBE1CCFA2D006B6D00C7B714 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CBE1CCF82D006A2800C7B714 /* AppFont.swift */,
+				CBE1CCFB2D006B7A00C7B714 /* Montserrat-Black.otf */,
+				CBE1CCFC2D006B7A00C7B714 /* Montserrat-Bold.otf */,
+				CBE1CCFD2D006B7A00C7B714 /* Montserrat-ExtraBold.otf */,
+				CBE1CCFE2D006B7A00C7B714 /* Montserrat-Medium.otf */,
+				CBE1CCFF2D006B7A00C7B714 /* Montserrat-SemiBold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		D671D94B2913E528001FA9D5 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +304,7 @@
 				D671D98A2913ED95001FA9D5 /* Controls */,
 				CB0A2C202CFF476500C8B73A /* DependencyInjection */,
 				D671D9952915110C001FA9D5 /* Networking */,
+				CBE1CCEE2D00516200C7B714 /* Utilities */,
 				D671D9652913E529001FA9D5 /* Info.plist */,
 			);
 			path = "InPost Interview Coding Task";
@@ -275,6 +330,7 @@
 		D671D9882913E677001FA9D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				CBE1CCF12D0051F300C7B714 /* DesignSystem */,
 				D671D9602913E529001FA9D5 /* Assets.xcassets */,
 				D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */,
 			);
@@ -294,6 +350,7 @@
 		D671D98A2913ED95001FA9D5 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				CBE1CD092D0076D600C7B714 /* NSAttributedString+AppFont.swift */,
 				D671D98B2913EDA4001FA9D5 /* IPNavigationController.swift */,
 			);
 			path = Controls;
@@ -439,6 +496,11 @@
 			files = (
 				D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */,
 				D671D99E2915139F001FA9D5 /* packs.json in Resources */,
+				CBE1CD002D006B7A00C7B714 /* Montserrat-Bold.otf in Resources */,
+				CBE1CD012D006B7A00C7B714 /* Montserrat-Black.otf in Resources */,
+				CBE1CD022D006B7A00C7B714 /* Montserrat-SemiBold.otf in Resources */,
+				CBE1CD032D006B7A00C7B714 /* Montserrat-ExtraBold.otf in Resources */,
+				CBE1CD042D006B7A00C7B714 /* Montserrat-Medium.otf in Resources */,
 				D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */,
 				D671D9942913F82E001FA9D5 /* PackView.xib in Resources */,
 			);
@@ -568,7 +630,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE1CCF92D006A2A00C7B714 /* AppFont.swift in Sources */,
 				CB0A2C272CFF49AB00C8B73A /* PackListDependencyProvider.swift in Sources */,
+				CBE1CCED2D00513600C7B714 /* Colors.swift in Sources */,
 				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
 				CB0A2C1B2CFF062400C8B73A /* PackListTableViewDataProvider.swift in Sources */,
 				CB0A2C192CFF02FB00C8B73A /* PackListView.swift in Sources */,
@@ -579,14 +643,18 @@
 				CB0A2C312CFF96CC00C8B73A /* PackListSection.swift in Sources */,
 				CB0A2C392CFFA36900C8B73A /* PackListTableViewSectionHeader.swift in Sources */,
 				CB0A2C252CFF493D00C8B73A /* DependencyProvidersContainer.swift in Sources */,
+				CBE1CCF02D00517500C7B714 /* UIColor+hex.swift in Sources */,
 				CB0A2C032CFE558300C8B73A /* PackListViewModel.swift in Sources */,
 				D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */,
 				CB0A2C372CFF97FD00C8B73A /* PackSection.swift in Sources */,
 				CB0A2C352CFF97AE00C8B73A /* PacksOrganizer.swift in Sources */,
+				CBE1CCF52D00540500C7B714 /* LayoutTokens.swift in Sources */,
+				CBE1CCF72D00693300C7B714 /* ColorTokens.swift in Sources */,
 				CB0A2C1E2CFF18C800C8B73A /* PackListTableViewCell.swift in Sources */,
 				CB0A2C152CFE64B200C8B73A /* PackMapper.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
 				CB0A2C2D2CFF628900C8B73A /* URLFactory.swift in Sources */,
+				CBE1CD0A2D0076D600C7B714 /* NSAttributedString+AppFont.swift in Sources */,
 				CB0A2C2F2CFF63C100C8B73A /* NetworkService.swift in Sources */,
 				CB0A2C2B2CFF624A00C8B73A /* APIEndpoint.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,

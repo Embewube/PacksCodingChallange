@@ -44,6 +44,7 @@ class PackListController: UIViewController {
 
         tableViewDataProvider.setup(tableView: packListView.tableView)
         packListView.tableView.dataSource = tableViewDataProvider
+        packListView.tableView.delegate = tableViewDataProvider
 
         setupBindings()
         viewModel.loadPacks()

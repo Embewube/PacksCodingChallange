@@ -12,7 +12,7 @@ struct PackSection {
 
         var title: String {
             switch self {
-            case .readyToPickup:    return "Gotowa do odbioru" // wb_TODO: use translations
+            case .readyToPickup:    return "Gotowe do odbioru" // wb_TODO: use translations
             case .others:           return "Pozostałe"
             }
         }

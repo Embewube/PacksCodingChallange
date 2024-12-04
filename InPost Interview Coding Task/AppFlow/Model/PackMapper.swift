@@ -27,7 +27,7 @@ struct PackMapper: PackMapping {
 
     func map(_ packSection: PackSection) -> PackListSection {
         return PackListSection(
-            title: packSection.type.rawValue,
+            title: packSection.type.title,
             items: map(packSection.packs)
         )
     }

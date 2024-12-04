@@ -15,6 +15,7 @@ class PackListView: UIView, PackListViewProtocol {
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
         return tableView
     }()
 
@@ -24,7 +25,7 @@ class PackListView: UIView, PackListViewProtocol {
 
     init() {
         super.init(frame: .zero)
-        backgroundColor = .white // wb_TODO: use Design System
+        backgroundColor = Colors.App.background
         setupLayout()
     }
 }

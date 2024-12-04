@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PackListTableViewDataProviderProtocol: NSObject, UITableViewDataSource {
+protocol PackListTableViewDataProviderProtocol: NSObject, UITableViewDataSource, UITableViewDelegate {
     var sections: [PackListSection] { get set }
 
     func setup(tableView: UITableView)
@@ -43,6 +43,9 @@ extension PackListTableViewDataProvider: PackListTableViewDataProviderProtocol {
             forHeaderFooterViewReuseIdentifier: PackListTableViewSectionHeader.reuseIdentifier
         )
     }
+}
+
+extension PackListTableViewDataProvider: UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Sections
 
@@ -50,12 +53,25 @@ extension PackListTableViewDataProvider: PackListTableViewDataProviderProtocol {
         return sections.count
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(
+        _ tableView: UITableView,
+        viewForHeaderInSection section: Int
+    ) -> UIView? {
         guard section < sections.count else {
             return nil
         }
 
-        return sections[section].title
+        let headerView = tableView.dequeueReusableHeaderFooterView(
+            withIdentifier: PackListTableViewSectionHeader.reuseIdentifier
+        ) as! PackListTableViewSectionHeader
+
+        headerView.title = sections[section].title
+
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 48
     }
 
     // MARK: - Rows

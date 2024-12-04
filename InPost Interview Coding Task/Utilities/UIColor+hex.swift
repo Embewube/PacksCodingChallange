@@ -1,0 +1,50 @@
+//
+//  UIColor+hex.swift
+//  InPost Interview Coding Task
+//
+//  Created by Wiktor Biruk on 04/12/2024.
+//
+
+import UIKit
+
+public extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+
+        self.init(
+            red: CGFloat(red) / 255.0,
+            green: CGFloat(green) / 255.0,
+            blue: CGFloat(blue) / 255.0,
+            alpha: 1.0
+        )
+    }
+
+    convenience init(hex: Int) {
+        self.init(
+            red: (hex >> 16) & 0xFF,
+            green: (hex >> 8) & 0xFF,
+            blue: hex & 0xFF
+        )
+    }
+
+    convenience init(hexString: String) {
+        var adjustedValue = hexString
+
+        if adjustedValue.hasPrefix("#") {
+            adjustedValue.removeAll {
+                $0 == "#"
+            }
+        }
+
+        if let hexValue = Int(adjustedValue, radix: 16) {
+            self.init(hex: hexValue)
+        } else {
+            assertionFailure("Wrong hexString: \(hexString)")
+
+            self.init(white: 0, alpha: 0)
+        }
+    }
+}
+
