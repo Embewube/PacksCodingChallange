@@ -10,12 +10,16 @@
 import UIKit
 
 public enum Colors {
-    public enum App {
-        static let background = ColorTokens.gray1
-    }
+    public enum PackList {
+        static let listBackground = ColorTokens.gray1
+        static let itemBackground = ColorTokens.white1
+        static let itemShadow = ColorTokens.gray5
+        static let itemLabel = ColorTokens.gray4
+        static let itemValue = ColorTokens.black1
+        static let buttonColor = ColorTokens.black1
+        static let accent = ColorTokens.yellow1
 
-    public enum GroupingHeader {
-        static let divider = ColorTokens.gray2
-        static let text = ColorTokens.gray3
+        static let groupDivider = ColorTokens.gray2
+        static let groupTitle = ColorTokens.gray3
     }
 }

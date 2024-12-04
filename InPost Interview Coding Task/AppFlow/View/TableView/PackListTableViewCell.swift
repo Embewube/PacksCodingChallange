@@ -29,6 +29,7 @@ final class PackListTableViewCell: UITableViewCell {
 
     private func setupLayout() {
         contentView.addSubview(view)
+        backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([

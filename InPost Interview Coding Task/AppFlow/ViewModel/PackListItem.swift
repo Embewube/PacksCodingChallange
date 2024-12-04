@@ -9,4 +9,7 @@ struct PackListItem: Equatable {
     let id: String
     let status: String
     let sender: String
+    let iconName: String
+    let isExpirationHidden: Bool
+    let expiration: String?
 }

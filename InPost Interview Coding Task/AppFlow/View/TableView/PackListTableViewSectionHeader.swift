@@ -12,7 +12,7 @@ final class PackListTableViewSectionHeader: UITableViewHeaderFooterView {
 
     private let font: AppFont = AppFont(
         size: 13,
-        weight: 0.6,
+        weight: 0.3,
         kerning: 0.4,
         lineHeight: 16
     )
@@ -22,7 +22,7 @@ final class PackListTableViewSectionHeader: UITableViewHeaderFooterView {
         stackView.axis = .horizontal
         stackView.distribution = .fill
         stackView.alignment = .center
-        stackView.spacing = 16
+        stackView.spacing = LayoutTokens.Spacing.m
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -30,7 +30,7 @@ final class PackListTableViewSectionHeader: UITableViewHeaderFooterView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = font.uiFont
-        label.textColor = Colors.GroupingHeader.text
+        label.textColor = Colors.PackList.groupTitle
         return label
     }()
 
@@ -59,8 +59,6 @@ final class PackListTableViewSectionHeader: UITableViewHeaderFooterView {
 
 private extension PackListTableViewSectionHeader {
     private func setupView() {
-        backgroundColor = .clear
-        
         addSubview(stackView)
         stackView.addArrangedSubview(leadingDivider)
         stackView.addArrangedSubview(titleLabel)
@@ -80,7 +78,7 @@ private extension PackListTableViewSectionHeader {
 
     private func makeDivider() -> UIView {
         let divider = UIView()
-        divider.backgroundColor = Colors.GroupingHeader.divider
+        divider.backgroundColor = Colors.PackList.groupDivider
         return divider
     }
 }

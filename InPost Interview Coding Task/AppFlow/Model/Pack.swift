@@ -47,11 +47,22 @@ struct Pack: Codable {
         }
     }
 
+    enum ShipmentType: String, Codable {
+        case courier = "COURIER"
+        case parcelLocker = "PARCEL_LOCKER"
+        case unknown
+        
+        init(from decoder: any Decoder) throws {
+            let rawValue: String = try decoder.singleValueContainer().decode(String.self)
+            self = ShipmentType(rawValue: rawValue) ?? .unknown
+        }
+    }
+
     let id: String
     let status: Status
     let sender: String
     let expiryDate: Date?
     let pickupDate: Date?
     let storedDate: Date?
-    let shipmentType: String
+    let shipmentType: ShipmentType
 }

@@ -7,7 +7,12 @@
 
 public enum LayoutTokens {
     enum Padding {
+        static let s = 8.0
         static let m = 16.0
         static let l = 20.0
+    }
+
+    enum Spacing {
+        static let m = 16.0
     }
 }

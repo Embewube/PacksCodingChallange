@@ -31,7 +31,6 @@ class PackListTableViewDataProvider: NSObject {
 
 extension PackListTableViewDataProvider: PackListTableViewDataProviderProtocol {
     func setup(tableView: UITableView) {
-        self.tableView = tableView
         tableView.separatorStyle = .none
 
         tableView.register(
@@ -42,6 +41,7 @@ extension PackListTableViewDataProvider: PackListTableViewDataProviderProtocol {
             PackListTableViewSectionHeader.self,
             forHeaderFooterViewReuseIdentifier: PackListTableViewSectionHeader.reuseIdentifier
         )
+        self.tableView = tableView
     }
 }
 

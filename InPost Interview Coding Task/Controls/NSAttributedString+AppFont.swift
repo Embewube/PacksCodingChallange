@@ -8,11 +8,16 @@
 import UIKit
 
 extension NSAttributedString {
-    convenience init?(_ text: String?, font: AppFont) {
+    convenience init?(
+        _ text: String?,
+        font: AppFont,
+        alignment: NSTextAlignment? = nil
+    ) {
         guard let text else { return nil }
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.minimumLineHeight = font.lineHeight
+        paragraphStyle.alignment = alignment ?? .left
         let attributedString = NSAttributedString(
             string: text,
             attributes: [

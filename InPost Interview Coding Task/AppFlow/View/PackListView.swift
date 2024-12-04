@@ -25,7 +25,7 @@ class PackListView: UIView, PackListViewProtocol {
 
     init() {
         super.init(frame: .zero)
-        backgroundColor = Colors.App.background
+        backgroundColor = Colors.PackList.listBackground
         setupLayout()
     }
 }
