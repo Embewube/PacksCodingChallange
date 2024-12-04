@@ -45,6 +45,25 @@ struct Pack: Codable, Equatable {
             let rawValue: String = try decoder.singleValueContainer().decode(String.self)
             self = Status(rawValue: rawValue) ?? .unknown
         }
+
+        var priority: Int {
+            return switch self {
+            case .created:                  1
+            case .confirmed:                2
+            case .adoptedAtSourceBranch:    3
+            case .sentFromSourceBranch:     4
+            case .adoptedAtSortingCenter:   5
+            case .sentFromSortingCenter:    6
+            case .other:                    7
+            case .delivered:                8
+            case .returnedToSender:         9
+            case .avizo:                    10
+            case .outForDelivery:           11
+            case .readyToPickup:            12
+            case .pickupTimeExpired:        13
+            case .unknown:                  14
+            }
+        }
     }
 
     enum ShipmentType: String, Codable {

@@ -29,6 +29,8 @@
 		CB2002F72D00D0E7004AB29C /* PacksOrganizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002F62D00D0E2004AB29C /* PacksOrganizerTests.swift */; };
 		CB2002F92D00D92C004AB29C /* GetPacksUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002F82D00D928004AB29C /* GetPacksUseCaseTests.swift */; };
 		CB2002FB2D00D94E004AB29C /* PackMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002FA2D00D94E004AB29C /* PackMapperTests.swift */; };
+		CB2002FD2D00E2A2004AB29C /* PacksSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002FC2D00E29F004AB29C /* PacksSorter.swift */; };
+		CB2002FF2D00EFEE004AB29C /* PacksSorterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002FE2D00EFEB004AB29C /* PacksSorterTests.swift */; };
 		CBE1CCED2D00513600C7B714 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCEC2D00512F00C7B714 /* Colors.swift */; };
 		CBE1CCF02D00517500C7B714 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCEF2D00517100C7B714 /* UIColor+hex.swift */; };
 		CBE1CCF52D00540500C7B714 /* LayoutTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCF42D0053FB00C7B714 /* LayoutTokens.swift */; };
@@ -93,6 +95,8 @@
 		CB2002F62D00D0E2004AB29C /* PacksOrganizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksOrganizerTests.swift; sourceTree = "<group>"; };
 		CB2002F82D00D928004AB29C /* GetPacksUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPacksUseCaseTests.swift; sourceTree = "<group>"; };
 		CB2002FA2D00D94E004AB29C /* PackMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackMapperTests.swift; sourceTree = "<group>"; };
+		CB2002FC2D00E29F004AB29C /* PacksSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksSorter.swift; sourceTree = "<group>"; };
+		CB2002FE2D00EFEB004AB29C /* PacksSorterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksSorterTests.swift; sourceTree = "<group>"; };
 		CBE1CCEC2D00512F00C7B714 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CBE1CCEF2D00517100C7B714 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		CBE1CCF42D0053FB00C7B714 /* LayoutTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTokens.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			children = (
 				CB0A2C122CFE644A00C8B73A /* GetPacksUseCase.swift */,
 				CB0A2C342CFF97AA00C8B73A /* PacksOrganizer.swift */,
+				CB2002FC2D00E29F004AB29C /* PacksSorter.swift */,
 				CB0A2C142CFE64B000C8B73A /* PackMapper.swift */,
 				D671D98E2913F2A1001FA9D5 /* Pack.swift */,
 				CB0A2C362CFF97F700C8B73A /* PackSection.swift */,
@@ -238,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				CB2002F62D00D0E2004AB29C /* PacksOrganizerTests.swift */,
+				CB2002FE2D00EFEB004AB29C /* PacksSorterTests.swift */,
 				CB2002FA2D00D94E004AB29C /* PackMapperTests.swift */,
 				CB2002F82D00D928004AB29C /* GetPacksUseCaseTests.swift */,
 				CB2002F32D00CA37004AB29C /* Mocks */,
@@ -610,6 +616,7 @@
 				CB0A2C172CFE650D00C8B73A /* PackListItem.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
 				CB0A2C132CFE645300C8B73A /* GetPacksUseCase.swift in Sources */,
+				CB2002FD2D00E2A2004AB29C /* PacksSorter.swift in Sources */,
 				CB0A2C312CFF96CC00C8B73A /* PackListSection.swift in Sources */,
 				CB0A2C392CFFA36900C8B73A /* PackListTableViewSectionHeader.swift in Sources */,
 				CB0A2C252CFF493D00C8B73A /* DependencyProvidersContainer.swift in Sources */,
@@ -638,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB2002FB2D00D94E004AB29C /* PackMapperTests.swift in Sources */,
+				CB2002FF2D00EFEE004AB29C /* PacksSorterTests.swift in Sources */,
 				CB2002F52D00CA3F004AB29C /* GetPacksUseCaseMock.swift in Sources */,
 				CBE1CD142D00BCA000C7B714 /* PackListViewModelTests.swift in Sources */,
 				CB2002F72D00D0E7004AB29C /* PacksOrganizerTests.swift in Sources */,

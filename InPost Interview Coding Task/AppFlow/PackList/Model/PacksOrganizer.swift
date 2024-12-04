@@ -12,6 +12,7 @@ protocol PacksOrganizing {
 struct PacksOrganizer {}
 
 extension PacksOrganizer: PacksOrganizing {
+    // wb_NOTE: complexity O(n)
     func group(packs: [Pack]) -> [PackSection] {
         var readyPacks: [Pack] = []
         var otherPacks: [Pack] = []

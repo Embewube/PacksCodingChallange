@@ -12,22 +12,26 @@ protocol GetPacksUseCaseProtocol {
 struct GetPacksUseCase: GetPacksUseCaseProtocol {
     private let packsNetworking: PacksNetworkingProtocol
     private let packsOrganizer: PacksOrganizing
+    private let packsSorter: PacksSorting
     private let mapper: PackMapping
 
     init(
         packsNetworking: PacksNetworkingProtocol,
         packsOrganizer: PacksOrganizing,
+        packsSorter: PacksSorting,
         mapper: PackMapping
     ) {
         self.packsNetworking = packsNetworking
         self.packsOrganizer = packsOrganizer
+        self.packsSorter = packsSorter
         self.mapper = mapper
     }
 
     func get() async throws -> [PackListSection] {
         let packs = try await packsNetworking.getPacks()
-        let packsGrouped = packsOrganizer.group(packs: packs)
+        let groupedPacks = packsOrganizer.group(packs: packs)
+        let groupsWithSortedPacks = packsSorter.sortPacks(in: groupedPacks)
 
-        return mapper.map(packsGrouped)
+        return mapper.map(groupsWithSortedPacks)
     }
 }
