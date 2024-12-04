@@ -9,7 +9,10 @@ import XCTest
 import Combine
 @testable import InPost_Interview_Coding_Task
 
+// wb_NOTE: this is an exaple of unit tests for class with dependencies
+
 final class PackListViewModelTests: XCTestCase {
+    // wb_TODO: generate mock values of entities
     private enum Constants {
         static let simulatedPackListItem = PackListItem(
             id: "any id",

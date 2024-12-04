@@ -24,7 +24,7 @@ import Foundation
  * 13. PICKUP_TIME_EXPIRED
  */
 
-struct Pack: Codable {
+struct Pack: Codable, Equatable {
     enum Status: String, Codable {
         case created = "CREATED"
         case confirmed = "CONFIRMED"

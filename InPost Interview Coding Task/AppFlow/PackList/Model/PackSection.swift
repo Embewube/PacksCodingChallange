@@ -5,7 +5,7 @@
 //  Created by Wiktor Biruk on 03/12/2024.
 //
 
-struct PackSection {
+struct PackSection: Equatable {
     enum SectionType: String {
         case readyToPickup
         case others
