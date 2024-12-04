@@ -27,6 +27,8 @@
 		CB0A2C392CFFA36900C8B73A /* PackListTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2C382CFFA36000C8B73A /* PackListTableViewSectionHeader.swift */; };
 		CB2002F52D00CA3F004AB29C /* GetPacksUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002F42D00CA3B004AB29C /* GetPacksUseCaseMock.swift */; };
 		CB2002F72D00D0E7004AB29C /* PacksOrganizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002F62D00D0E2004AB29C /* PacksOrganizerTests.swift */; };
+		CB2002F92D00D92C004AB29C /* GetPacksUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002F82D00D928004AB29C /* GetPacksUseCaseTests.swift */; };
+		CB2002FB2D00D94E004AB29C /* PackMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2002FA2D00D94E004AB29C /* PackMapperTests.swift */; };
 		CBE1CCED2D00513600C7B714 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCEC2D00512F00C7B714 /* Colors.swift */; };
 		CBE1CCF02D00517500C7B714 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCEF2D00517100C7B714 /* UIColor+hex.swift */; };
 		CBE1CCF52D00540500C7B714 /* LayoutTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CCF42D0053FB00C7B714 /* LayoutTokens.swift */; };
@@ -89,6 +91,8 @@
 		CB0A2C382CFFA36000C8B73A /* PackListTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListTableViewSectionHeader.swift; sourceTree = "<group>"; };
 		CB2002F42D00CA3B004AB29C /* GetPacksUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPacksUseCaseMock.swift; sourceTree = "<group>"; };
 		CB2002F62D00D0E2004AB29C /* PacksOrganizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksOrganizerTests.swift; sourceTree = "<group>"; };
+		CB2002F82D00D928004AB29C /* GetPacksUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPacksUseCaseTests.swift; sourceTree = "<group>"; };
+		CB2002FA2D00D94E004AB29C /* PackMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackMapperTests.swift; sourceTree = "<group>"; };
 		CBE1CCEC2D00512F00C7B714 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CBE1CCEF2D00517100C7B714 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		CBE1CCF42D0053FB00C7B714 /* LayoutTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTokens.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				CB2002F62D00D0E2004AB29C /* PacksOrganizerTests.swift */,
+				CB2002FA2D00D94E004AB29C /* PackMapperTests.swift */,
+				CB2002F82D00D928004AB29C /* GetPacksUseCaseTests.swift */,
 				CB2002F32D00CA37004AB29C /* Mocks */,
 			);
 			path = Model;
@@ -631,9 +637,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2002FB2D00D94E004AB29C /* PackMapperTests.swift in Sources */,
 				CB2002F52D00CA3F004AB29C /* GetPacksUseCaseMock.swift in Sources */,
 				CBE1CD142D00BCA000C7B714 /* PackListViewModelTests.swift in Sources */,
 				CB2002F72D00D0E7004AB29C /* PacksOrganizerTests.swift in Sources */,
+				CB2002F92D00D92C004AB29C /* GetPacksUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,6 @@
 
 import UIKit
 
-// wb_TODO: handle kerning
-
 public struct AppFont {
     private static let defaultFontName = "Montserrat"
 

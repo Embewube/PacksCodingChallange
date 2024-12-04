@@ -5,7 +5,7 @@
 //  Created by Wiktor Biruk on 04/12/2024.
 //
 
-// wb_TODO: move to a seperate library
+// wb_TODO: move all design components to a seperate library
 
 import UIKit
 

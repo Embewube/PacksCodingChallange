@@ -15,6 +15,7 @@ protocol PackMapping {
 }
 
 struct PackMapper: PackMapping {
+    // wb_TODO: inject date formatter
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "E. | dd.MM.yy | HH:mm"
@@ -51,6 +52,7 @@ struct PackMapper: PackMapping {
     }
 }
 
+// wb_TODO: breaking Single responsibility - create other mappers
 private extension PackMapper {
     private func extractIconName(from shipmentType: Pack.ShipmentType) -> String {
         return switch shipmentType {
@@ -60,7 +62,6 @@ private extension PackMapper {
         }
     }
 
-    // wb_TODO: Single responsibility - create another mapper
     private func extractStatus(from status: Pack.Status) -> String {
         return switch status {
         case .outForDelivery:   "Wydana do doręczenia"
