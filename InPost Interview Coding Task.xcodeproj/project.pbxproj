@@ -37,6 +37,7 @@
 		CBE1CD042D006B7A00C7B714 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBE1CCFE2D006B7A00C7B714 /* Montserrat-Medium.otf */; };
 		CBE1CD0A2D0076D600C7B714 /* NSAttributedString+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CD092D0076D600C7B714 /* NSAttributedString+AppFont.swift */; };
 		CBE1CD0C2D008F6500C7B714 /* LabeledValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CD0B2D008F4C00C7B714 /* LabeledValueView.swift */; };
+		CBE1CD142D00BCA000C7B714 /* PackListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CD132D00BCA000C7B714 /* PackListViewModelTests.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		CBE1CCFF2D006B7A00C7B714 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		CBE1CD092D0076D600C7B714 /* NSAttributedString+AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+AppFont.swift"; sourceTree = "<group>"; };
 		CBE1CD0B2D008F4C00C7B714 /* LabeledValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledValueView.swift; sourceTree = "<group>"; };
+		CBE1CD132D00BCA000C7B714 /* PackListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListViewModelTests.swift; sourceTree = "<group>"; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
@@ -275,6 +277,40 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		CBE1CD0D2D00BBED00C7B714 /* AppFlow */ = {
+			isa = PBXGroup;
+			children = (
+				CBE1CD0E2D00BBF200C7B714 /* PackList */,
+			);
+			path = AppFlow;
+			sourceTree = "<group>";
+		};
+		CBE1CD0E2D00BBF200C7B714 /* PackList */ = {
+			isa = PBXGroup;
+			children = (
+				CBE1CD102D00BC4000C7B714 /* ViewModel */,
+			);
+			path = PackList;
+			sourceTree = "<group>";
+		};
+		CBE1CD0F2D00BC0900C7B714 /* PackList */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2C002CFE555200C8B73A /* Model */,
+				CB0A2BFF2CFE554D00C8B73A /* View */,
+				CB0A2C012CFE555600C8B73A /* ViewModel */,
+			);
+			path = PackList;
+			sourceTree = "<group>";
+		};
+		CBE1CD102D00BC4000C7B714 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CBE1CD132D00BCA000C7B714 /* PackListViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D671D94B2913E528001FA9D5 = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +349,7 @@
 		D671D96D2913E529001FA9D5 /* InPost Interview Coding TaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				CBE1CD0D2D00BBED00C7B714 /* AppFlow */,
 				D671D96E2913E529001FA9D5 /* InPostTests.swift */,
 			);
 			path = "InPost Interview Coding TaskTests";
@@ -340,9 +377,7 @@
 		D671D9892913E685001FA9D5 /* AppFlow */ = {
 			isa = PBXGroup;
 			children = (
-				CB0A2C002CFE555200C8B73A /* Model */,
-				CB0A2BFF2CFE554D00C8B73A /* View */,
-				CB0A2C012CFE555600C8B73A /* ViewModel */,
+				CBE1CD0F2D00BC0900C7B714 /* PackList */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
@@ -667,6 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D671D96F2913E529001FA9D5 /* InPostTests.swift in Sources */,
+				CBE1CD142D00BCA000C7B714 /* PackListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

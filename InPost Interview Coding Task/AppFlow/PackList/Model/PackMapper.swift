@@ -15,27 +15,23 @@ protocol PackMapping {
 }
 
 struct PackMapper: PackMapping {
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "E. | dd.MM.yy | HH:mm"
+        return formatter
+    }()
+
     func map(_ pack: Pack) -> PackListItem {
-
-        // wb_TODO: inject custom formatter
-        let dateFormatter: DateFormatter = {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "dd.MM.yyyy"
-            return formatter
-        }()
-
-        let expiration: String? = {
-            guard let expiryDate = pack.expiryDate else { return nil }
-            return dateFormatter.string(from: expiryDate)
-        }()
+        let (expirationLabel, expirationValue) = extractExpiration(from: pack)
 
         return PackListItem(
             id: pack.id,
             status: extractStatus(from: pack.status),
             sender: pack.sender,
             iconName: extractIconName(from: pack.shipmentType),
-            isExpirationHidden: expiration == nil,
-            expiration: expiration
+            isExpirationHidden: expirationValue == nil,
+            expirationValue: expirationValue,
+            expirationLabel: expirationLabel
         )
     }
 
@@ -72,5 +68,25 @@ private extension PackMapper {
         case .delivered:        "Odebrana"
         default:                status.rawValue
         }
+    }
+
+    private func extractExpiration(from pack: Pack) -> (expirationLabel: String?, expirationValue: String?) {
+        var date: Date?
+        var expirationLabel: String?
+        switch pack.status {
+        case .readyToPickup:
+            date = pack.expiryDate
+            expirationLabel = "CZEKA NA ODBIÓR"
+        case .delivered:
+            date = pack.pickupDate
+            expirationLabel = "ODEBRANA"
+        default:
+            return (nil, nil)
+        }
+
+        guard let date else {
+            return (nil, nil)
+        }
+        return (expirationLabel, dateFormatter.string(from: date))
     }
 }

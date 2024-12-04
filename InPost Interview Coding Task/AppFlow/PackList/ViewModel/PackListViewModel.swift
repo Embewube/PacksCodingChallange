@@ -8,7 +8,7 @@
 import Combine
 
 protocol PackListViewModelProtocol: ObservableObject {
-    var packs: AnyPublisher<[PackListSection], Never> { get } // wb_TODO: change to item view model
+    var packs: AnyPublisher<[PackListSection], Never> { get }
     func loadPacks()
 }
 

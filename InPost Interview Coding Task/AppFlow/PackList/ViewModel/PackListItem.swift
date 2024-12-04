@@ -11,5 +11,6 @@ struct PackListItem: Equatable {
     let sender: String
     let iconName: String
     let isExpirationHidden: Bool
-    let expiration: String?
+    let expirationValue: String?
+    let expirationLabel: String?
 }

@@ -35,7 +35,6 @@ class PackView: UIView {
         )
     }
 
-    // wb_TODO: handle shadow between sections
     private let contentContainer = UIView()
     private let backgroundView = UIView()
     private let mainVerticalStackView = UIStackView()
@@ -85,7 +84,8 @@ class PackView: UIView {
 
         statusLabeledValueView.value = pack.status
         expirationLabeledValueView.isHidden = pack.isExpirationHidden
-        expirationLabeledValueView.value = pack.expiration
+        expirationLabeledValueView.title = pack.expirationLabel
+        expirationLabeledValueView.value = pack.expirationValue
 
         senderLabeledValueView.value = pack.sender
     }
@@ -102,6 +102,7 @@ private extension PackView {
         setupMainVerticalStackView()
         setupPackIDStackView()
         setupIcon()
+        setupStatusLabeledValueView()
         setupExpirationLabeledValueView()
         setupSenderStackView()
         setupMoreButton()
@@ -119,15 +120,15 @@ private extension PackView {
         mainVerticalStackView.addArrangedSubview(senderStackView)
 
         packIDStackView.addArrangedSubview(idLabeledValueView)
-        packIDStackView.addArrangedSubview(UIView()) // flexible spacing
+        packIDStackView.addArrangedSubview(makeSpacerView()) // flexible spacing
         packIDStackView.addArrangedSubview(icon)
 
         statusStackView.addArrangedSubview(statusLabeledValueView)
-        statusStackView.addArrangedSubview(UIView()) // flexible spacing
+        statusStackView.addArrangedSubview(makeSpacerView()) // flexible spacing
         statusStackView.addArrangedSubview(expirationLabeledValueView)
 
         senderStackView.addArrangedSubview(senderLabeledValueView)
-        senderStackView.addArrangedSubview(UIView()) // flexible spacing
+        senderStackView.addArrangedSubview(makeSpacerView())
         senderStackView.addArrangedSubview(moreButton)
     }
 
@@ -173,7 +174,7 @@ private extension PackView {
             mainVerticalStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: LayoutTokens.Padding.l),
             mainVerticalStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -LayoutTokens.Padding.l),
             mainVerticalStackView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: LayoutTokens.Padding.m),
-            mainVerticalStackView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -LayoutTokens.Padding.s),
+            mainVerticalStackView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -LayoutTokens.Padding.s), // wb_TODO: decrease value when last cell insection
         ])
     }
 
@@ -187,8 +188,12 @@ private extension PackView {
     }
 
     private func setupStatusStackView() {
-        packIDStackView.axis = .horizontal
-        packIDStackView.alignment = .top
+        statusStackView.axis = .horizontal
+        statusStackView.alignment = .top
+    }
+
+    private func setupStatusLabeledValueView() {
+        statusLabeledValueView.setContentCompressionResistancePriority(.required, for: .horizontal)
     }
 
     private func setupExpirationLabeledValueView() {
@@ -203,7 +208,7 @@ private extension PackView {
     private func setupMoreButton() {
         moreButton.setTitleColor(Colors.PackList.buttonColor, for: .normal)
         moreButton.titleLabel?.font = Constants.buttonFont.uiFont
-        let attributedTitle = NSAttributedString("więcej ", font: Constants.buttonFont)
+        let attributedTitle = NSAttributedString("więcej ", font: Constants.buttonFont) // wb_TODO: use translations
         moreButton.setAttributedTitle(attributedTitle, for: .normal)
         moreButton.setImage(UIImage(resource: ImageResource.arrow), for: .normal)
         moreButton.semanticContentAttribute = .forceRightToLeft
@@ -212,8 +217,13 @@ private extension PackView {
     private func setupTexts() {
         idLabeledValueView.title = "NR PRZESYŁKI" // wb_TODO: use translations
         statusLabeledValueView.title = "STATUS"
-        expirationLabeledValueView.title = "CZEKA NA ODBIOR DO"
         senderLabeledValueView.title = "NADAWCA"
+    }
+
+    private func makeSpacerView() -> UIView {
+        let spacerView = UIView()
+        spacerView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        return spacerView
     }
 
 }
